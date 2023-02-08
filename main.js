@@ -45,7 +45,8 @@ function display() {
       input.style.color = "rgba(91, 0, 228, 0.762)"
       input.style.fontWeight = "700"
       item.style.backgroundColor = "white"
-      
+      deletee.classList.remove("delete")
+      deletee.classList.add("deletenon")
       input.removeAttribute("readonly")
       edit.innerText = "Save"
 
