@@ -91,6 +91,7 @@ function display() {
       })
       clear.classList.remove("cleardis")
       clear.classList.add("clear")
+      clear.disabled = false
       
     }
     else {
