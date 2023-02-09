@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
     tasks.push(task)
     localStorage.setItem("tasks",JSON.stringify(tasks))
 
+
     e.target.reset()
 
     display()
@@ -72,6 +73,40 @@ function display() {
           tasks = tasks.filter(t => t != task)
           localStorage.setItem("tasks",JSON.stringify(tasks))
           display()}, 300);
+
+          
     })
+
   })
+  if (tasks.length != 0) {
+    const clear = document.querySelector("#clear")
+    clear.classList.remove("hidden")
+    clear.innerText = "CLEAR"
+    clear.classList.add("clear")
+    if (tasks.length > 1) {
+      clear.addEventListener("click", function() {
+        tasks = []
+        localStorage.setItem("tasks",JSON.stringify(tasks))
+        display()
+      })
+      clear.classList.remove("cleardis")
+      clear.classList.add("clear")
+      
+    }
+    else {
+      clear.classList.remove("clear")
+      clear.classList.add("cleardis")
+      clear.disabled = true
+    }
+    
+  }
+  else {
+    const clear = document.querySelector("#clear")
+    clear.classList.add("hidden")
+    setTimeout(() => {
+      clear.innerText = ""
+      clear.classList.remove("clear")
+    },300)
+    
+  }
 }
