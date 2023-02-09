@@ -18,6 +18,15 @@
     text-align: center;
     padding-bottom: 1rem;
   }
+  .addtask input[type="text"]{
+    width: 100%;
+    font-size: small;
+    color: black;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+  }
   .item{
     display: block;
     width: 100%;
@@ -83,5 +92,31 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+.checkbox-wrapper-24 label span {
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  width: 15px;
+  height: 15px;
+  transform-origin: center;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10px;
+  transition: background-color 150ms 200ms, transform 350ms cubic-bezier(0.78, -1.22, 0.17, 1.89);
 }
+footer{
+  width: 100%;
+  min-height: 3rem;
+  margin-top: 2rem;
+  display: flex;
+  font-size: small;
+  align-items: center;
+  background-color: rgba(32, 0, 80,0.8);
+}
+footer p {
+  margin-left: 1rem;
+}
+}
+
 

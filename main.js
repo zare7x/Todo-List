@@ -24,7 +24,7 @@ function display() {
     item.classList.add("item")
     const content = document.createElement("div")
     content.classList.add("content")
-
+    const checkbox = document.createElement("div")
     const edits = document.createElement("div")
     const edit = document.createElement("button")
     edits.classList.add("edits")
@@ -38,9 +38,12 @@ function display() {
     edits.appendChild(deletee)
 
     item.appendChild(content)
+    
     item.appendChild(edits)
     list.appendChild(item)
 
+    
+    
     edit.addEventListener("click" , e => {
       const input = content.querySelector("input[type='text']")
       input.style.color = "rgba(91, 0, 228, 0.762)"
@@ -111,3 +114,4 @@ function display() {
     
   }
 }
+
