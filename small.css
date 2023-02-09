@@ -1,0 +1,87 @@
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 14px;
+  }
+  
+  section.all {
+    width: 90%;
+  }
+  .content{
+    display: flex;
+  }
+  .item{
+    display: flex;
+    justify-content: center;
+
+  }
+  .allList h3{
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  .item{
+    display: block;
+    width: 100%;
+    
+    background-color: rgba(91, 0, 228, 0.762);
+    padding: 1rem;
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;  
+    transition: all 0.3s ease;
+  }
+  .content input[type="text"]{
+    font-size: larger;
+    margin-left: 0.5rem;
+}
+.item .edits{
+  margin: 0;
+}
+.item .edits{
+  display: flex;
+  justify-content: flex-end;
+}
+.item .edits .edit{
+  background-color: white;
+  color: black;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  margin-top: 1.3rem;
+  font-weight: 700;
+  transform: scale(1.1);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.item .edits .delete{
+  background-color: white;
+  color: black;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-top: 1.3rem;
+  margin-left: 0.7rem;
+  transform: scale(1.1);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.item .edits .deletenon{
+  background-color: white;
+  color: rgb(104, 104, 104);
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-top: 1.3rem;
+  margin-left: 0.7rem;
+  transform: scale(1.1);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+}
+
