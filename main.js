@@ -5,9 +5,9 @@ window.addEventListener("load", () => {
     e.preventDefault();
 
     const task = e.target.elements.task.value;
-    tasks.push(task)
+    tasktr = task.trimStart()
+    tasks.push(tasktr)
     localStorage.setItem("tasks",JSON.stringify(tasks))
-
 
     e.target.reset()
 
@@ -27,6 +27,8 @@ function display() {
     const checkbox = document.createElement("div")
     const edits = document.createElement("div")
     const edit = document.createElement("button")
+    const save = document.createElement("button")
+    save.classList.add("editactive")
     edits.classList.add("edits")
     edit.classList.add("edit")
     const deletee = document.createElement("button")
@@ -52,21 +54,21 @@ function display() {
       deletee.classList.remove("delete")
       deletee.classList.add("deletenon")
       input.removeAttribute("readonly")
-      edit.innerText = "Save"
-
+      edit.innerHTML = "Save"
+      
       edit.classList.add("editactive")
       input.focus()
       input.setSelectionRange(input.value.length,input.value.length)
       input.addEventListener("blur" , e => {
-      
         input.setAttribute("readonly" , true)
-        const taskIndex = tasks.indexOf(task);
+        if (e.target.value != "") {
+          const taskIndex = tasks.indexOf(task);
         tasks[taskIndex] = e.target.value;
         localStorage.setItem("tasks", JSON.stringify(tasks));
+        }
         display();
         })
       })
-
 
       deletee.addEventListener("click" , e => {
         
@@ -77,7 +79,6 @@ function display() {
           tasks = tasks.filter(t => t != task)
           localStorage.setItem("tasks",JSON.stringify(tasks))
           display()}, 300);
-
           
     })
 
