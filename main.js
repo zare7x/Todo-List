@@ -83,9 +83,11 @@ function display() {
     })
     item.addEventListener("click", e => {
       if (item.classList.contains("itemdone")) {
+        localStorage.setItem("item",unchecked)
         item.classList.remove("itemdone")
       }
       else {
+        localStorage.setItem("item",checked)
         item.classList.add("itemdone")
       }
       
