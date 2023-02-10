@@ -153,6 +153,19 @@ section{
 
   transition: all 0.4s ease;
 }
+.itemdone {
+  display: flex;
+  transform: rotateX(0deg);
+  opacity: 1;
+  background-color: rgba(184, 136, 255, 0.762);
+  margin: 1rem;
+  text-decoration: line-through;
+  padding: 1rem;
+  border-radius: 10px;
+  justify-content: space-between;
+  height: auto;
+
+}
 
 .hidden {
   transform: rotateX(90deg);
@@ -234,7 +247,6 @@ section{
   font-size: larger;
   width: 100%;
   margin-left: 0.7rem;
-  
 }
 
 footer{

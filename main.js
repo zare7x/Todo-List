@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
   const newTask = document.querySelector("#add-form")
   newTask.addEventListener("submit" , e => {
     e.preventDefault();
-
+    
     const task = e.target.elements.task.value;
     tasktr = task.trimStart()
     tasks.push(tasktr)
@@ -62,7 +62,7 @@ function display() {
       input.addEventListener("blur" , e => {
         input.setAttribute("readonly" , true)
         if (e.target.value != "") {
-          const taskIndex = tasks.indexOf(task);
+        const taskIndex = tasks.indexOf(task);
         tasks[taskIndex] = e.target.value;
         localStorage.setItem("tasks", JSON.stringify(tasks));
         }
@@ -81,7 +81,16 @@ function display() {
           display()}, 300);
           
     })
-
+    input.addEventListener("click", e => {
+      if (item.classList.contains("itemdone")) {
+        item.classList.remove("itemdone")
+      }
+      else {
+        item.classList.add("itemdone")
+      }
+      
+    })
+    
   })
   if (tasks.length != 0) {
     const nums = document.querySelector(".nums")
