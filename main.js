@@ -56,8 +56,9 @@ function display() {
 
       edit.classList.add("editactive")
       input.focus()
+      input.setSelectionRange(input.value.length,input.value.length)
       input.addEventListener("blur" , e => {
-        
+      
         input.setAttribute("readonly" , true)
         const taskIndex = tasks.indexOf(task);
         tasks[taskIndex] = e.target.value;
