@@ -81,7 +81,7 @@ function display() {
           display()}, 300);
           
     })
-    input.addEventListener("click", e => {
+    item.addEventListener("click", e => {
       if (item.classList.contains("itemdone")) {
         item.classList.remove("itemdone")
       }
