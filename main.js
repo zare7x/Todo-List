@@ -82,6 +82,14 @@ function display() {
 
   })
   if (tasks.length != 0) {
+    const nums = document.querySelector(".nums")
+    nums.innerHTML = `${tasks.length}`
+  }
+  else {
+    const nums = document.querySelector(".nums")
+    nums.innerHTML = `0`
+  }
+  if (tasks.length != 0) {
     const clear = document.querySelector("#clear")
     clear.classList.remove("hidden")
     clear.innerText = "CLEAR"

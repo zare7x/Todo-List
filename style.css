@@ -45,6 +45,24 @@ section{
 
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.208);
 }
+.idk{
+  display: flex;
+}
+.nums{
+  background-color: white;
+  width: 1.8rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+  
+  display: flex;
+  font-weight: 700;
+  font-size: medium;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20%;
+  color: black;
+  
+}
 .content{
   display: flex;
 }
