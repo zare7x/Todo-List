@@ -92,6 +92,7 @@ section{
   border-radius: 10px;  
   transition: all 0.3s ease;
 }
+
 .clear {
   display: block;
   width: 100%;
@@ -152,19 +153,6 @@ section{
   height: auto;
 
   transition: all 0.4s ease;
-}
-.itemdone {
-  display: flex;
-  transform: rotateX(0deg);
-  opacity: 1;
-  background-color: rgba(184, 136, 255, 0.762);
-  margin: 1rem;
-  text-decoration: line-through;
-  padding: 1rem;
-  border-radius: 10px;
-  justify-content: space-between;
-  height: auto;
-
 }
 
 .hidden {
